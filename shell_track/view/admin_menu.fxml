@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<SplitPane dividerPositions="0.21804511278195488" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="shell_track.view.AdminMenuController">
+    <items>
+        <AnchorPane fx:id="mainPane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-border-color: #155c72; -fx-border-width: 5; -fx-background-color: white;">
+            <children>
+                <Button fx:id="editUsers" layoutX="16.0" layoutY="80.0" mnemonicParsing="false" onAction="#editUser" prefHeight="36.0" prefWidth="141.0" text="User Management">
+               <font>
+                  <Font name="Book Antiqua Bold Italic" size="13.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#0b7ec6" />
+               </effect></Button>
+            <Button fx:id="inputTransaction" layoutX="16.0" layoutY="139.0" mnemonicParsing="false" onAction="#inputTransaction" prefHeight="36.0" prefWidth="141.0" text="Input Transactions">
+               <font>
+                  <Font name="Book Antiqua Bold Italic" size="13.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#0b7ec6" />
+               </effect></Button>
+            <Button fx:id="editTransactions" layoutX="16.0" layoutY="181.0" mnemonicParsing="false" onAction="#editTransaction" prefHeight="36.0" prefWidth="141.0" text="Edit Transactions">
+               <font>
+                  <Font name="Book Antiqua Bold Italic" size="13.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#0b7ec6" />
+               </effect></Button>
+            <Button fx:id="reports" layoutX="16.0" layoutY="247.0" mnemonicParsing="false" onAction="#reports" prefHeight="36.0" prefWidth="141.0" text="Reports">
+               <font>
+                  <Font name="Book Antiqua Bold Italic" size="13.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#0b7ec6" />
+               </effect></Button>
+            <Label alignment="CENTER" layoutX="18.0" layoutY="14.0" prefHeight="17.0" prefWidth="134.0" text="Admin Page" textFill="#155c72" underline="true">
+               <font>
+                  <Font name="Book Antiqua Bold Italic" size="20.0" />
+               </font></Label>
+            <Text fill="#155c72" layoutX="18.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-Shell Track-" textAlignment="CENTER" underline="true" wrappingWidth="134.0">
+               <font>
+                  <Font name="Book Antiqua Bold Italic" size="14.0" />
+               </font>
+            </Text>
+            <Button fx:id="signOut" layoutX="16.0" layoutY="309.0" mnemonicParsing="false" onAction="#signOut" prefHeight="36.0" prefWidth="141.0" text="Sign Out">
+               <font>
+                  <Font name="Book Antiqua Bold Italic" size="13.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#0b7ec6" />
+               </effect></Button>
+            <Label fx:id="signedInUser" alignment="CENTER" contentDisplay="CENTER" layoutX="30.0" layoutY="40.0" prefHeight="18.0" prefWidth="113.0" textFill="#436a75">
+               <font>
+                  <Font name="Book Antiqua Bold Italic" size="16.0" />
+               </font></Label>
+            <Line endX="81.0" layoutX="87.0" layoutY="127.0" startX="-87.0" stroke="#155c72" strokeWidth="3.0" />
+            <Line endX="81.0" layoutX="87.0" layoutY="233.0" startX="-87.0" stroke="#155c72" strokeWidth="3.0" />
+            <Line endX="81.0" layoutX="87.0" layoutY="298.0" startX="-87.0" stroke="#155c72" strokeWidth="3.0" />
+            </children></AnchorPane>
+        <AnchorPane fx:id="switchPane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-border-color: #155c72; -fx-border-width: 5; -fx-background-color: white;">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="178.0" layoutX="5.0" layoutY="4.0" stroke="BLACK" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="2.0" width="611.0">
+               <effect>
+                  <Glow level="0.13" />
+               </effect>
+            </Rectangle>
+            <Circle layoutX="302.0" layoutY="182.0" radius="101.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="0.0">
+               <fill>
+                  <LinearGradient endX="0.8857142857142857" endY="1.0" startX="0.8761904761904762" startY="0.24761904761904766">
+                     <stops>
+                        <Stop color="#ffc300" />
+                        <Stop color="#ffc300" offset="0.022988505747126436" />
+                        <Stop color="#ff7b00" offset="0.2515700912430379" />
+                        <Stop color="#ff5100" offset="0.5095785440613027" />
+                        <Stop color="#ff5100" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+               <effect>
+                  <InnerShadow blurType="ONE_PASS_BOX" choke="0.69" color="#ff9000d3" height="130.71" radius="55.96" width="95.13" />
+               </effect>
+            </Circle>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="219.0" layoutX="5.0" layoutY="175.0" stroke="BLACK" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="2.0" width="611.0">
+               <fill>
+                  <LinearGradient endX="0.40476190476190477" endY="0.0380952380952381" startX="0.38571428571428573" startY="0.719047619047619">
+                     <stops>
+                        <Stop color="#0f3861" />
+                        <Stop color="#0f3861" offset="0.06896551724137931" />
+                        <Stop color="#0f3861" offset="0.26819923371647486" />
+                        <Stop color="#a47a5e" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+               <effect>
+                  <Glow level="0.13" />
+               </effect>
+            </Rectangle>
+         </children></AnchorPane>
+    </items>
+</SplitPane>

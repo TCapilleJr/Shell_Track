@@ -1,0 +1,223 @@
+@startuml
+
+title __VIEW's Class Diagram__\n
+
+  namespace shell_track {
+    namespace view {
+      class shell_track.view.AddUserController {
+          - addUserEmail : TextField
+          - addUserPw : PasswordField
+          - adminCheck : CheckBox
+          - dialogStage : Stage
+          - employeeCheck : CheckBox
+          + addUser()
+          + cancel()
+          + getUser()
+          + setDialogStage()
+          + setUser()
+          - isCorrectSelection()
+      }
+    }
+  }
+  
+
+  namespace shell_track {
+    namespace view {
+      class shell_track.view.AdminMenuController {
+          - addNewUser : Button
+          - editTransactions : Button
+          - editUser : Button
+          - inputTransactions : Button
+          - mainPane : AnchorPane
+          - reports : Button
+          - switchPane : AnchorPane
+          + addNewUser()
+          + editTransaction()
+          + editUser()
+          + inputTransaction()
+          + reports()
+      }
+    }
+  }
+  
+
+  namespace shell_track {
+    namespace view {
+      abstract class shell_track.view.Controller {
+          {static} - primaryStage : Stage
+          {static} + infoBox()
+          {static} + showAlert()
+          + switchScreen()
+      }
+    }
+  }
+  
+
+  namespace shell_track {
+    namespace view {
+      class shell_track.view.EditTransactionController {
+          - TRANSACTION_QUERY : String
+          - addNewUser : Button
+          - clientName : TableColumn<Transaction, String>
+          - date : TableColumn<Transaction, String>
+          - deleteTrans : Button
+          - editTrans : Button
+          - id : TableColumn<Transaction, Integer>
+          - productType : TableColumn<Transaction, String>
+          - soldReceived : TableColumn<Transaction, String>
+          - transactionTable : TableView<Transaction>
+          + deleteTransaction()
+          + displayMoreInfo()
+          + editTrans()
+          + initialize()
+          - getTransactionData()
+      }
+    }
+  }
+  
+
+  namespace shell_track {
+    namespace view {
+      class shell_track.view.EditTransactionDialog {
+          - client : TextField
+          - countPerUnit : TextField
+          - dialogStage : Stage
+          - enteredBy : Label
+          - harvestDate : TextField
+          - harvestLocation : TextField
+          - numberOfUnits : TextField
+          - okClicked : boolean
+          - originalHarvestNumber : TextField
+          - shippingDate : TextField
+          - soldReceived : TextField
+          - temperature : TextField
+          - timestamp : Label
+          - transactionID : Label
+          - typeOfShellfish : TextField
+          + handleCancel()
+          + handleOk()
+          + setDialogStage()
+          + setTransaction()
+          - isValidInput()
+      }
+    }
+  }
+  
+
+  namespace shell_track {
+    namespace view {
+      class shell_track.view.EditUserController {
+          - USER_QUERY : String
+          - USER_QUERY : String
+          - deleteUser : Button
+          - editUser : Button
+          - userAccess : TableColumn<User, String>
+          - userName : TableColumn<User, String>
+          - userTable : TableView<User>
+          + initialize()
+          - addNewUser()
+          - deleteUser()
+          - editUserAccess()
+          - getUserData()
+      }
+    }
+  }
+  
+
+  namespace shell_track {
+    namespace view {
+      class shell_track.view.InputTransactionController {
+          - client : TextField
+          - countPerUnit : TextField
+          - harvestDate : DatePicker
+          - harvestLocation : TextField
+          - numberOfUnits : TextField
+          - originalHarvestNumber : TextField
+          - shippingDate : DatePicker
+          - sold : CheckBox
+          - temperature : TextField
+          - typeOfShellFish : TextField
+          + addTransaction()
+          + back()
+          + isCorrectInput()
+      }
+    }
+  }
+  
+
+  namespace shell_track {
+    namespace view {
+      class shell_track.view.LoginController {
+          - addPw : PasswordField
+          - addSubmitButton : Button
+          - addUser : TextField
+          - addUserCancelButton : Button
+          - adminCheck : CheckBox
+          - emailIdField : TextField
+          - employeeCheck : CheckBox
+          - passwordField : PasswordField
+          - submitButton : Button
+          + login()
+      }
+    }
+  }
+  
+
+  namespace shell_track {
+    namespace view {
+      class shell_track.view.MoreInfoController {
+          - client : Label
+          - countPerUnit : Label
+          - dialogStage : Stage
+          - enteredBy : Label
+          - harvestDate : Label
+          - harvestLocation : Label
+          - numberOfUnits : Label
+          - originalHarvestNumber : Label
+          - shippingDate : Label
+          - soldReceived : Label
+          - temperature : Label
+          - timestamp : Label
+          - transactionID : Label
+          - typeOfShellfish : Label
+          + back()
+          + setDialogStage()
+          + setTransaction()
+      }
+    }
+  }
+  
+
+  namespace shell_track {
+    namespace view {
+      class shell_track.view.ReportController {
+          + back()
+      }
+    }
+  }
+  
+
+  shell_track.view.AddUserController -up-|> shell_track.view.Controller
+  shell_track.view.AddUserController o-- shell_track.model.User : user
+  shell_track.view.AdminMenuController -up-|> shell_track.view.Controller
+  shell_track.view.EditTransactionController .up.|> javafx.fxml.Initializable
+  shell_track.view.EditTransactionController -up-|> shell_track.view.Controller
+  shell_track.view.EditTransactionDialog -up-|> shell_track.view.Controller
+  shell_track.view.EditTransactionDialog o-- shell_track.model.Transaction : transaction
+  shell_track.view.EditUserController .up.|> javafx.fxml.Initializable
+  shell_track.view.EditUserController -up-|> shell_track.view.Controller
+  shell_track.view.InputTransactionController -up-|> shell_track.view.Controller
+  shell_track.view.LoginController -up-|> shell_track.view.Controller
+  shell_track.view.MoreInfoController -up-|> shell_track.view.Controller
+  shell_track.view.MoreInfoController o-- shell_track.model.Transaction : transaction
+  shell_track.view.ReportController -up-|> shell_track.view.Controller
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

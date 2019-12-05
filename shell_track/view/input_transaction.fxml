@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-border-color: #155c72; -fx-border-width: 5; -fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="shell_track.view.InputTransactionController">
+   <children>
+      <DatePicker fx:id="harvestDate" layoutX="459.0" layoutY="83.0" prefHeight="27.0" prefWidth="126.0" />
+      <Label alignment="CENTER_RIGHT" layoutX="344.0" layoutY="88.0" prefHeight="17.0" prefWidth="115.0" text="Harvest Date:" textFill="#155c72">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER_RIGHT" layoutX="344.0" layoutY="123.0" prefHeight="17.0" prefWidth="115.0" text="Shipping Date:" textFill="#155c72">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="14.0" />
+         </font></Label>
+      <DatePicker fx:id="shippingDate" layoutX="459.0" layoutY="118.0" prefHeight="27.0" prefWidth="126.0" />
+      <TextField fx:id="numberOfUnits" alignment="CENTER" layoutX="175.0" layoutY="132.0" prefHeight="27.0" prefWidth="150.0">
+         <font>
+            <Font name="Book Antiqua Bold" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="countPerUnit" alignment="CENTER" layoutX="175.0" layoutY="165.0" prefHeight="27.0" prefWidth="150.0" />
+      <TextField fx:id="temperature" alignment="CENTER" layoutX="175.0" layoutY="291.0" prefHeight="27.0" prefWidth="150.0">
+         <font>
+            <Font name="Book Antiqua Bold" size="12.0" />
+         </font></TextField>
+      <Label alignment="CENTER_RIGHT" layoutX="18.0" layoutY="88.0" prefHeight="17.0" prefWidth="156.0" text="Type of Shellfish:" textFill="#155c72">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER_RIGHT" layoutX="18.0" layoutY="137.0" prefHeight="17.0" prefWidth="156.0" text="Number of Units:" textFill="#155c72">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER_RIGHT" layoutX="18.0" layoutY="170.0" prefHeight="17.0" prefWidth="156.0" text="Count per Unit:" textFill="#155c72">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER_RIGHT" layoutX="19.0" layoutY="217.0" prefHeight="17.0" prefWidth="156.0" text="Harvest Location:" textFill="#155c72">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER_RIGHT" layoutX="19.0" layoutY="296.0" prefHeight="17.0" prefWidth="156.0" text="Temperature:" textFill="#155c72">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="14.0" />
+         </font></Label>
+      <CheckBox fx:id="sold" layoutX="13.0" layoutY="44.0" mnemonicParsing="false" onAction="#productOnHandScene" prefHeight="26.0" prefWidth="239.0" text="Product is Outgoing" textFill="#155c72">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="14.0" />
+         </font></CheckBox>
+      <Label alignment="CENTER_RIGHT" layoutX="348.0" layoutY="170.0" prefHeight="17.0" prefWidth="88.0" text="Client:" textFill="#155c72">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="14.0" />
+         </font></Label>
+      <Button fx:id="enter" layoutX="490.0" layoutY="338.0" mnemonicParsing="false" onAction="#addTransaction" prefHeight="32.0" prefWidth="88.0" text="Submit">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="14.0" />
+         </font></Button>
+      <Text fill="#155c72" layoutX="13.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Original Harvest Number:" wrappingWidth="167.0">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="14.0" />
+         </font></Text>
+      <ComboBox fx:id="originalHarvestNumber" layoutX="175.0" layoutY="247.0" prefHeight="27.0" prefWidth="150.0" />
+      <ComboBox fx:id="typeOfShellFish" layoutX="175.0" layoutY="84.0" prefWidth="150.0" />
+      <MenuButton fx:id="options" layoutX="348.0" layoutY="255.0" mnemonicParsing="false" popupSide="RIGHT" text="Options">
+        <items>
+          <MenuItem fx:id="add_editProduct" mnemonicParsing="false" onAction="#productTypeScene" text="Add/Delete Product Type" />
+          <MenuItem fx:id="add_editClient" mnemonicParsing="false" onAction="#clientScene" text="Add/Delete Client" />
+           <MenuItem fx:id="add_editHarvestLocation" mnemonicParsing="false" onAction="#harvestLocationScene" text="Add/Delete Harvest Location" />
+           <MenuItem fx:id="add_editOriginalHarvestNumber" mnemonicParsing="false" onAction="#harvestNumberScene" text="Add/Delete Original Harvest Number" />
+           <MenuItem fx:id="product_on_hand" mnemonicParsing="false" onAction="#productOnHandScene" text="Product on hand" />
+        </items>
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="14.0" />
+         </font>
+      </MenuButton>
+      <ComboBox fx:id="harvestLocation" layoutX="175.0" layoutY="213.0" prefHeight="25.0" prefWidth="150.0" />
+      <ComboBox fx:id="client" layoutX="436.0" layoutY="166.0" prefHeight="25.0" prefWidth="150.0" />
+      <Label layoutX="142.0" layoutY="6.0" text="-Input Transaction-" textFill="#155c72">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <Button layoutX="78.0" layoutY="341.0" mnemonicParsing="false" onAction="#clearAllFields" prefHeight="32.0" prefWidth="66.0" text="Clear">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="14.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

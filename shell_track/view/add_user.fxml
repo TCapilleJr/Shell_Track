@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="214.0" prefWidth="576.0" style="-fx-background-color: white; -fx-border-color: #155c72; -fx-border-width: 5;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="shell_track.view.AddUserController">
+   <children>
+      <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="50.0" prefHeight="27.0" prefWidth="94.0" text="Username:" textFill="#155c72">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="122.0" prefHeight="23.0" prefWidth="94.0" text="Access: " textFill="#155c72">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="84.0" prefHeight="27.0" prefWidth="94.0" text="Password:" textFill="#155c72">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="addUserName" alignment="CENTER" layoutX="121.0" layoutY="52.0" promptText="Email">
+         <font>
+            <Font name="Book Antiqua Bold" size="12.0" />
+         </font></TextField>
+      <PasswordField fx:id="addUserPw" alignment="CENTER" layoutX="121.0" layoutY="86.0" promptText="Password">
+         <font>
+            <Font name="Book Antiqua Bold" size="12.0" />
+         </font></PasswordField>
+      <CheckBox fx:id="adminCheck" layoutX="121.0" layoutY="124.0" mnemonicParsing="false" text="Admin">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="14.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="employeeCheck" layoutX="204.0" layoutY="124.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="94.0" text="Employee">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="14.0" />
+         </font>
+      </CheckBox>
+      <Button fx:id="addSubmitButton" layoutX="46.0" layoutY="176.0" mnemonicParsing="false" onAction="#addUser" text="Submit">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="14.0" />
+         </font></Button>
+      <Button fx:id="addUserCancelButton" layoutX="133.0" layoutY="176.0" mnemonicParsing="false" onAction="#cancel" text="Cancel">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="14.0" />
+         </font></Button>
+      <Label fx:id="shellTrackLabel1" alignment="CENTER" layoutX="174.0" layoutY="5.0" prefHeight="47.0" prefWidth="211.0" text="-Add User-" textFill="#155c72">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="300.0" layoutY="50.0" prefHeight="18.0" prefWidth="87.0" text="First Name" textFill="#155c72">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER_RIGHT" layoutX="300.0" layoutY="84.0" prefHeight="18.0" prefWidth="87.0" text="Last Name" textFill="#155c72">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER_RIGHT" layoutX="307.0" layoutY="120.0" prefHeight="18.0" prefWidth="81.0" text="Address" textFill="#155c72">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="14.0" />
+         </font></Label>
+      <TextField fx:id="firstName" alignment="CENTER" layoutX="394.0" layoutY="47.0" promptText="First Name">
+         <font>
+            <Font name="Book Antiqua Bold" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="lastName" alignment="CENTER" layoutX="394.0" layoutY="80.0" promptText="Last Name">
+         <font>
+            <Font name="Book Antiqua Bold" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="address" alignment="CENTER" layoutX="394.0" layoutY="116.0" promptText="Address">
+         <font>
+            <Font name="Book Antiqua Bold" size="12.0" />
+         </font></TextField>
+      <Label alignment="CENTER_RIGHT" layoutX="318.0" layoutY="155.0" prefHeight="18.0" prefWidth="68.0" text="Email" textFill="#155c72">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="14.0" />
+         </font></Label>
+      <TextField fx:id="email" alignment="CENTER" layoutX="394.0" layoutY="152.0" promptText="Email">
+         <font>
+            <Font name="Book Antiqua Bold" size="12.0" />
+         </font></TextField>
+   </children>
+</AnchorPane>

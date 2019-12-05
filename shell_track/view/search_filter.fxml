@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="240.0" prefWidth="536.0" style="-fx-background-color: white; -fx-border-color: #155c72; -fx-border-width: 5;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="shell_track.view.SearchController">
+   <children>
+      <Label alignment="CENTER" layoutX="37.0" layoutY="63.0" prefHeight="18.0" prefWidth="88.0" text="Date from:" textFill="#155c72">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="14.0" />
+         </font></Label>
+      <Label layoutX="284.0" layoutY="63.0" text="Date to:" textFill="#155c72">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER" layoutX="37.0" layoutY="112.0" text="Product Type:" textFill="#155c72">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="14.0" />
+         </font></Label>
+      <Label layoutX="289.0" layoutY="112.0" text="Client:" textFill="#155c72">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="14.0" />
+         </font></Label>
+      <Button fx:id="submit" layoutX="289.0" layoutY="187.0" mnemonicParsing="false" onAction="#submit" prefHeight="28.0" prefWidth="91.0" text="Submit">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="14.0" />
+         </font></Button>
+      <Button fx:id="cancel" layoutX="413.0" layoutY="187.0" mnemonicParsing="false" onAction="#cancel" prefHeight="28.0" prefWidth="91.0" text="Cancel">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="14.0" />
+         </font></Button>
+      <DatePicker fx:id="dateFrom" layoutX="133.0" layoutY="58.0" prefHeight="27.0" prefWidth="126.0" />
+      <DatePicker fx:id="dateTo" layoutX="347.0" layoutY="58.0" prefHeight="27.0" prefWidth="132.0" />
+      <ComboBox fx:id="productType" layoutX="133.0" layoutY="107.0" prefHeight="27.0" prefWidth="126.0" />
+      <ComboBox fx:id="client" layoutX="347.0" layoutY="107.0" prefHeight="27.0" prefWidth="132.0" />
+      <CheckBox fx:id="soldReceived" layoutX="52.0" layoutY="161.0" mnemonicParsing="false" text="Outgoing Transaction" textFill="#155c72">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="14.0" />
+         </font></CheckBox>
+      <Label layoutX="168.0" layoutY="14.0" text="-Transaction Search-" textFill="#155c72" underline="true">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="22.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
